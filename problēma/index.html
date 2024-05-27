@@ -1,0 +1,124 @@
+!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrikumu šķirošana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Atrikumu šķirošana</h1>
+        <nav>
+            <ul>
+                <li><a href="#parstrade">Par pārstrādi</a></li>
+                <li><a href="#sikosana">Šķirošana</a></li>
+                <li><a href="#atkritumu-veidi">Atrikumu veidi</a></li>
+                <li><a href="#kontakti">Kontakti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="parstrade">
+            <h2>Par pārstrādi</h2>
+            <p>Šeit varat uzzināt par atkritumu pārstrādi un tās nozīmi mūsu videi.</p>
+            <img src="trash-or-recycle.jpg" alt="Par pārstrādi" width="500">
+        </section>
+
+        <section id="sikosana">
+            <h2>Šķirošana</h2>
+            <p>Šeit varat uzzināt, kā pareizi šķirot atkritumus.</p>
+            <img src="pic33.jpg" alt="Šķirošana" width="500">
+        </section>
+
+        <section id="atkritumu-veidi">
+            <h2>Atrikumu veidi</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Atrikumu veids</th>
+                        <th>Šķirošanas metode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Plastmasa</td>
+                        <td>Papīrs</td>
+                    </tr>
+                    <tr>
+                        <td>Metāli</td>
+                        <td>Stikls</td>
+                    </tr>
+                    <tr>
+                        <td>Organiskie atkritumi</td>
+                        <td>Elektroierīces</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+<section>
+  <h2>Atkritumu šķirošana Latvijā</h2>
+  <p>Lai gan vairāk nekā puse – 56% – aptaujāto atzinusi, ka šķiro sadzīves atkritumus, tomēr sabiedrības iesaistes līmenis ir samērā zems. No atkritumu šķirošanas galvenokārt cilvēkus atturot dalīto atkritumu konteineru trūkums dzīvesvietas tuvumā, kā arī ieradums visu izmest vienuviet. Šķirošanas konteineru trūkumu un nesakārtoto infrastruktūru, īpaši Rīgā, kā problēmu atzīst arī Vides aizsardzības un reģionālās attīstības ministrija (VARAM).</p>
+</section>
+<section id="meklešana">
+  <h2>Meklēšana</h2>
+  <form id="meklesanas-forma">
+      <label for="atkritumu-meklešana">Ievadiet atkritumu veidu:</label>
+      <input type="text" id="atkritumu-meklešana" name="atkritumu-meklešana" required>
+      <button type="submit">Meklēt</button>
+  </form>
+  <div id="meklesanas-rezultats">
+      <!-- Šeit tiks ievietots rezultāts pēc meklēšanas -->
+  </div>
+</section>
+<head>
+  <title>Latvijas šķirošanas konteineri</title>
+  <style>
+      /* Stila definīcijas var tikt iekļautas šeit */
+      #map {
+          height: 400px;
+          width: 100%;
+      }
+  </style>
+</head>
+<body>
+  <h1>Latvijas šķirošanas konteineri</h1>
+  <div id="map"></div>
+
+  <script>
+      // Izveidojam karti
+      function initMap() {
+          var latvija = {lat: 56.8796, lng: 24.6032}; // Latvijas koordinātas
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 7, center: latvija});
+
+          // Šķirošanas konteineru koordinātes (piemērs)
+          var konteineri = [
+              {lat: 56.9465, lng: 24.1052}, // Rīga
+              {lat: 56.5613, lng: 27.0556}, // Daugavpils
+              {lat: 57.5234, lng: 25.4248}, // Valmiera
+              // Papildiniet sarakstu ar citām šķirošanas konteineru koordinātēm
+          ];
+
+          // Pievienojam marķierus katram šķirošanas konteineram
+          for (var i = 0; i < konteineri.length; i++) {
+              new google.maps.Marker({position: konteineri[i], map: map});
+          }
+      }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=TAVS_API_ATSLĒGA&callback=initMap">
+  </script>
+</body>
+
+        <section id="kontakti">
+            <h2>Kontakti</h2>
+            <p>Lai sazinātos ar mums, zvaniet pa tālruni 20235689 vai rakstiet uz e-pastu atkitums@hmail.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Atrikumu šķirošana</p>
+    </footer>
+</body>

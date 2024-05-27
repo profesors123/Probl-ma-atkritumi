@@ -1,0 +1,90 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0fff0; /* Ekoloģisks zaļš fons */
+}
+
+header {
+    background-color: #089708; /* Zaļa galvenes fons */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #006400; /* Tumšāka zaļa navigācijas fons */
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #228b22; /* Gaišāka zaļa krāsa pārbaudes stāvoklim */
+}
+
+main {
+    padding: 1em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #32cd32; /* Zaļa fona krāsa kājenei */
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 0.5em;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    margin-top: 0.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: #228b22; /* Gaiši zaļa pogas fons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #32cd32; /* Spilgti zaļa pogas fona krāsa pārbaudes stāvoklim */
+}
